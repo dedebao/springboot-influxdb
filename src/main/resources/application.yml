@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: springboot-rest-api
+  influxdb:
+    url: http://192.168.153.129:8086 
+    database: stream
+    username: admin
+    retention-policy: autogen
+
+---
+spring:
+  profiles: dev
+  influxdb:
+    url: http://127.0.0.1:8086
+  devtools:
+    remote:
+      secret: thisismysecret
